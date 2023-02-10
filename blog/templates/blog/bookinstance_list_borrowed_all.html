@@ -1,0 +1,23 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Все одолженные книги</h1>
+    <hr>
+    {% if bookinstance_list %}
+        <ul>
+            {% for bookinst in bookinstance_list %}
+                <li class="{% if bookinst.is_overdue %}text-danger{% endif %}">
+                    <a href="{% url 'book-detail' bookinst.book.pk %}">{{ bookinst.book.title }}</a>({{ bookinst.due_back }})
+                    {% if user.is_staff %}
+                        {{ bookinst.borrower }}
+                    {% endif %}
+                    {% if perms.blog.can_mark_returned %}
+                        <a href="{% url 'renew-book-librarian' bookinst.id %}">Возобновить</a>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Нет одолженных книг.</p>
+    {% endif %}
+{% endblock %}

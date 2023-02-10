@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Домашняя библиотека</h1>
+    <p>Добро пожаловать в Домашнюю библиотеку! Разработка сайта <em>am&design</em></p>
+    <hr>
+    <h2>Динамический контент</h2>
+    <p>В библиотеке имеется следующее количество записей:</p>
+    <ul>
+        <li><strong>Книги:</strong> {{ num_books }}</li>
+        <li><strong>Всего книг:</strong> {{ num_instances }}</li>
+        <li><strong>Книг доступно:</strong> {{ num_instances_available }}</li>
+        <li><strong>Авторы:</strong> {{ num_authors }}</li>
+        <li><strong>Жанры:</strong> {{ num_gener }}</li>
+    </ul>
+
+    <p>Вы уже посещали эту страницу {{ num_visits }} раз{{ num_visits|pluralize:"а" }}.</p>
+{% endblock %}
