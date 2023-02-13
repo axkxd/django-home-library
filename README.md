@@ -16,15 +16,15 @@
 Чтобы запустить этот проект, сделайте следующее:
 1. Настройте среду разработки Python. 
     
-    [//] Linux
+    <!-- Linux -->
     
-    sudo apt-get install python3-venv    // If needed
+    sudo apt-get install python3-venv    <!--If needed-->
     
     python3 -m venv .venv
     
     source .venv/bin/activate
 
-    // Windows
+    <!-- Windows -->
     
     py -3 -m venv .venv
     
@@ -42,10 +42,12 @@
     
     python3 manage.py collectstatic
 
-    // Запустите тесты. Все должно работать.
+    <!-- Запустите тесты. Все должно работать. -->
+    
     python3 manage.py test
 
-    // При необходимости, создайте суперпользователя
+    <!-- При необходимости, создайте суперпользователя. -->
+    
     python3 manage.py createsuperuser
 
     python3 manage.py runserver
