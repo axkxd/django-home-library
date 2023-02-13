@@ -11,7 +11,7 @@
 - Пользователи с правами администратора могут создавать модели и управлять ими.
 - Пользователи с дополнительными правами могут продлевать подписку на книгу.
 
-    ![image info](C:\Users\aleks\Downloads\script_change_file\lib.png)
+    ![image info](django-home-library/blog/static/images/lib.png)
 
 ### Быстрый старт
 
