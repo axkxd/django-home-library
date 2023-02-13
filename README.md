@@ -15,7 +15,8 @@
 
 Чтобы запустить этот проект, сделайте следующее:
 1. Настройте среду разработки Python. 
-    // Linux
+    
+    [//] Linux
     
     sudo apt-get install python3-venv    // If needed
     
